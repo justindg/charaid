@@ -153,10 +153,6 @@ body {
 
 .appBody {
   display: none;
-  /*padding-bottom: 50px;
-  padding-top: 60px;
-  padding-left: 10px;
-  padding-right: 10px;*/
   overflow: auto;
 
   background-color: rgba(0,0,0,0.70);
@@ -379,6 +375,16 @@ body {
 
 .myContributions {
   margin-bottom: 15px;
+  overflow: auto;
+}
+
+.myContributions > div {
+  float: left;
+  width: 50%;
+}
+
+.col-amt {
+  text-align: right;
 }
 
 .addContribution {
@@ -387,7 +393,7 @@ body {
 }
 
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed; /* Stay in place */
   z-index: 5; /* Sit on top */
   left: 0;
@@ -407,7 +413,7 @@ body {
 }
 
 .modal-header {
-  background-color: gray;
+  background-color: #d61830;
   text-align: center;
   color: white;
   text-transform: uppercase;
@@ -415,10 +421,144 @@ body {
   font-weight: 700;
   padding: 10px 20px;
   border-radius: 5px 5px 0 0;
+  position: relative;
 }
 
 .modal-form {
   padding: 15px;
+  overflow: auto;
+}
+
+.modal-ok {
+  background-color: #d61830;
+  display: none;
+  text-align: center;
+  color: white;
+  border-radius: 0px 0px 5px 5px;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.modal-cancel {
+  position: absolute;
+  left: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.category-label {
+  color: #434344;
+  text-align: left;
+  width: 100%;
+  /*text-transform: uppercase;*/
+  /*font-weight: 700;*/
+  font-size: 1em;
+  /*font-family: "Georgia", serif;*/
+  margin-bottom: 5px;
+}
+
+
+.volunteer {
+  border-right: 2px solid white;
+  border-radius: 5px 0 0 5px;
+}
+
+.donate {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.donate_container {
+  display: none;
+  margin-top: 5px;
+  clear: both;
+  overflow: auto;
+}
+
+.amount {
+  overflow: auto;
+  display: none;
+  width: 100%;
+}
+
+.val {
+  width: inherit;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 1em;
+}
+
+.category {
+  overflow: auto;
+}
+
+.category > div {
+  float: left;
+  width: 50%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  text-align: center;
+  background-color: #bbb;
+  padding: 15px 0;
+  /*border: 1px solid black;*/
+  box-sizing: border-box;
+  color: white;
+}
+
+.category > div.selected {
+  background-color: #0096D6;
+}
+
+.volunteer_container {
+  display: none;
+  margin-top: 5px;
+  clear: both;
+  overflow: auto;
+}
+
+.label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #444;
+}
+
+.skill {
+  overflow: auto;
+  padding: 5px 0;
+}
+
+.time {
+  display: none;
+  overflow: auto;
+  padding: 5px 0;
+  /*border: 0;
+  font-size: 1em;
+  width: 100%;
+  outline: 0;*/
+}
+
+.item {
+  padding: 10px 15px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.selected {
+  background-color: #0096D6;
 }
 
 .dropdown {
@@ -438,16 +578,13 @@ body {
   /*border: 1px solid #888;*/
   border-radius: 5px;
   width: 80%;
-  height: 50%;
-  position: relative;
 }
 
 .btn-container {
-  position: absolute;
-  bottom: 0;
   padding: 0 15px 5px 15px;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 40px;
 }
 
 .btn-container > div {
@@ -455,13 +592,6 @@ body {
   /*float: left;*/
   /*box-sizing: border-box;*/
   margin-bottom: 10px;
-}
-
-#dd_volunteer,
-#dd_volunteer_amt,
-#dd_donate,
-#dd_donate_amt {
-  display: none;
 }
 
 /* */

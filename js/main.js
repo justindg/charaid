@@ -42,7 +42,7 @@ $('.tabCreate').on('click', function() {
   $(this).addClass('tabActive');
   $('.createDrive').slideDown();
   $('.appTitle').text('Create a Drive');
-  $('.bottomTabs').hide();
+  // $('.bottomTabs').hide();
   $('.createDetails').show();
   $('.createDriveHeader').text('Step 1 of 3');
   $('.createDriveHeader').show();
@@ -173,5 +173,112 @@ $("#dd_donate").on("change",function(){
 });
 
 $(".modal-cancel").on("click", function() {
-  $('modal').hide();
+  $('.modal').hide();
+});
+
+var data = {
+  category: "",
+  type: "",
+  amount: ""
+};
+
+var resetModal = function() {
+  $('.category > div').removeClass('selected');
+  $('.skill > div').removeClass('selected');
+  $('.time > div').removeClass('selected');
+  $('.type > div').removeClass('selected');
+  $('.amount > .val').val(0);
+  $('.amount').hide();
+  $('.time').hide();
+  $('.volunteer_container').hide();
+  $('.donate_container').hide();
+
+  data = {
+    category: "",
+    type: "",
+    amount: ""
+  };
+};
+
+$('.category > div').on('click', function() {
+  resetModal();
+  // $('.category > div').removeClass('selected');
+  $(this).addClass('selected');
+
+  data.category = $(this).find('.cat').text();
+
+  if (data.category === 'Donate') {
+    $('.donate_container').fadeIn(100);
+  } else if (data.category === 'Volunteer') {
+    $('.volunteer_container').fadeIn(100);
+  }
+});
+
+$('.skill > .item').on('click', function() {
+  $('.skill > .item').removeClass('selected');
+  $(this).addClass('selected');
+  data.type = $('.skill').find('.selected').text();
+  $('.time').fadeIn(100);
+});
+
+$('.type > .item').on('click', function() {
+  $('.type > .item').removeClass('selected');
+  $(this).addClass('selected');
+  data.type = $('.type').find('.selected').text();
+  $('.amount').fadeIn(100);
+});
+
+$('.amount > .val').on('keyup', function() {
+  data.amount = $('.val').val();
+  if (data.amount > 0) {
+    $('.modal-ok').fadeIn(100);
+  } else {
+    $('.modal-ok').hide();
+  }
+});
+
+$('.time > .item').on('click', function() {
+  // if ($(this).hasClass('selected')) {
+  //   $(this).removeClass('selected');
+  //   timeSelected--;
+  // } else {
+  //   $(this).addClass('selected');
+  //   timeSelected++;
+  // }
+  //
+  // if (timeSelected > 0) {
+  //   $('.modal-ok').fadeIn(100);
+  // } else {
+  //   $('.modal-ok').hide();
+  // }
+
+  $('.time > .item').removeClass('selected');
+  $(this).addClass('selected');
+  data.amount = $('.time').find('.selected').text();
+  $('.modal-ok').fadeIn(100);
+});
+
+$('.modal-ok').on('click', function () {
+  //add to event page
+  if($('.myContributions').text() === "-") {
+    $('.myContributions').text("");
+    console.log('ads');
+  }
+
+  var row = "<div class='col-cat'>"+ data.type +"</div>" + "<div class='col-amt'>"+ data.amount +"</div>";
+  $('.myContributions').append(
+    row
+  );
+
+
+  //TODO: add to my commitments tab
+
+  data = {
+    category: "",
+    type: "",
+    amount: ""
+  };
+
+  resetModal();
+  $('.modal').hide();
 });

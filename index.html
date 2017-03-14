@@ -145,43 +145,56 @@
     <div class="modal">
       <div class="modal-container">
         <div class="modal-content">
-          <div class="modal-header">Pledge Details</div>
-          <div class="modal-form">
-            <select name="category" id="category" class="dropdown">
-              <option value="" disabled selected>Select a category</option>
-              <option value="volunteer">Volunteer</option>
-              <option value="donate">Donate</option>
-            </select>
-
-            <select name="type" id="dd_volunteer" class="dropdown">
-              <option value="" disabled selected>Select a task</option>
-              <option rel="volunteer" value="Teach Art">Teach art</option>
-              <option rel="volunteer" value="Assist Kids">Assist Kids</option>
-              <option rel="volunteer" value="Distribute Food">Distribute Food</option>
-            </select>
-
-            <select name="type" id="dd_volunteer_amt" class="dropdown">
-              <option value="" disabled selected>Select a time</option>
-              <option rel="volunteer" value="9:00 - 10:00 AM">9:00 - 10:00 AM</option>
-              <option rel="volunteer" value="10:00 - 11:00 AM">10:00 - 11:00 AM</option>
-              <option rel="volunteer" value="11:00 - 12:00 AM<">11:00 - 12:00 AM</option>
-            </select>
-
-            <select name="type2" id="dd_donate" class="dropdown">
-              <option value="" disabled selected>Select an item</option>
-              <option rel="donate" value="Crayons / Coloring Materials">Crayons / Coloring Materials</option>
-              <option rel="donate" value="Paper">Paper</option>
-              <option rel="donate" value="Snacks">Snacks</option>
-            </select>
-
-            <input type="number" id="dd_donate_amt" class="dropdown">
-
-
+          <div class="modal-header">
+            <div class="modal-cancel">X</div>
+            Pledge Details
           </div>
-          <div class="btn-container">
-            <div class="button modal-ok">OK</div>
-            <div class="button modal-cancel">CANCEL</div>
-          </div>
+            <div class="modal-form">
+              <!-- <div class="category-label">I want to...</div> -->
+              <div class="category">
+                <div class="volunteer">
+                  <img src="./img/volunteer_sm.png">
+                  <div class="cat">Volunteer</div>
+                </div>
+                <div class="donate">
+                  <img src="./img/donate_sm.png">
+                  <div class="cat">Donate</div>
+                </div>
+              </div>
+              <!-- Volunteer start -->
+              <div class="volunteer_container">
+                <div class="skill">
+                  <div class="label">I want to:</div>
+                  <div class="item">Teach art</div>
+                  <div class="item">General assistance</div>
+                  <div class="item">Distribute food</div>
+                </div>
+
+                <div class="time">
+                  <div class="label">FROM:</div>
+                  <div class="item">9:00 - 10:00 AM</div>
+                  <div class="item">10:00 - 11:00 AM</div>
+                  <div class="item">11:00 - 12:00 PM</div>
+                </div>
+              </div>
+              <!-- Volunteer end -->
+              <!-- Donate start -->
+              <div class="donate_container">
+                <div class="type">
+                  <div class="label">I want to donate:</div>
+                  <div class="item">Crayons (boxes)</div>
+                  <div class="item">Paper (pcs)</div>
+                  <div class="item">Sausages (pcs)</div>
+                </div>
+
+                <div class="amount">
+                  <div class="label">AMOUNT:</div>
+                  <input class="val" type="number">
+                </div>
+              </div>
+              <!-- Donate end -->
+            </div>
+          <div class="modal-ok">OK</div>
         </div>
       </div>
     </div>
@@ -197,13 +210,10 @@
         <div class="viewTileLink">Event Page</div>
       </div>
       <div class="viewBody">
-        <div class="myContributions">
-          You have no commitments yet.
-        </div>
-
+        <div class="label">My Commitments</div>
+        <div class="myContributions">-</div>
         <div class="addContribution">
-          <!-- <div class="callToAction"></div> -->
-          <div class="button btnContribute">Add Contribution</div>
+          <div class="button btnContribute">Add Commitment</div>
         </div>
       </div>
 
