@@ -11,23 +11,37 @@ body {
 }
 
 .landingPage {
+  width: 100%;
   background-image: url('../img/landing_bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100%;
+  z-index: 3;
+  overflow: auto;
+}
+
+.landingPageLinks {
+  position: absolute;
+  /*padding: inherit;*/
+  padding: 10px 30px;
+  box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
 }
 
 .row {
+  position: relative;
   height: 100%;
   box-sizing: border-box;
-  padding: 50px 30px;
+  /*padding: 30px;*/
   background: rgba(0,0,0,0.70);
   overflow: hidden;
   z-index: 2;
 }
 
 .row2 {
+  width: 100%;
   height: 100%;
   box-sizing: border-box;
   padding-bottom: 70px;
@@ -43,6 +57,11 @@ body {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.videoContainer {
+  padding: 0 30px;
 }
 
 .title {
@@ -88,13 +107,13 @@ body {
 }
 
 .appBar {
-  display: none;
   background: white;
   position: fixed;
   top: 0;
   overflow: auto;
   width: 100%;
   border-bottom: 1px solid lightgrey;
+  z-index: 2;
 }
 
 .appTitle {
@@ -122,13 +141,13 @@ body {
 }
 
 .bottomTabs {
-  display: none;
   bottom: 0;
   width: 100%;
   position: fixed;
   height: 50px;
   border-top: 1px solid lightgray;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .tab {

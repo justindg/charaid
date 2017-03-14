@@ -1,8 +1,8 @@
 $('.beInvolved').on('click', function() {
   $('.landingPage').fadeOut();
-  $('.appBar').show();
+  // $('.appBar').show();
   $('.appBody').show();
-  $('.bottomTabs').show();
+  // $('.bottomTabs').show();
 });
 
 var hideAll = function() {
@@ -15,12 +15,13 @@ var hideAll = function() {
 
 $('.appHome').on('click', function() {
   hideAll();
-  $('.explore').slideDown();
-  $('.appTitle').text('Vision Rescue Projects');
+  // $('.explore').slideDown();
+  // $('.appTitle').text('Vision Rescue Projects');
 
-  if ($('.bottomTabs').is(':hidden')) {
-    $('.bottomTabs').show();
-  }
+  // if ($('.bottomTabs').is(':hidden')) {
+    // $('.bottomTabs').show();
+  // }
+  $('.landingPage').show();
 });
 
 $('.listItem').on('click', function() {
