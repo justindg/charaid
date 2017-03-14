@@ -16,12 +16,7 @@ var hideAll = function() {
 
 $('.appHome').on('click', function() {
   hideAll();
-  // $('.explore').slideDown();
-  // $('.appTitle').text('Vision Rescue Projects');
-
-  // if ($('.bottomTabs').is(':hidden')) {
-    // $('.bottomTabs').show();
-  // }
+  $('.appBody').hide();
   $('.landingPage').fadeIn();
 });
 
