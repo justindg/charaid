@@ -142,37 +142,100 @@
     </div>
     <!--Explore end -->
     <!--View item-->
-    <div class="viewDrive">
-      <div class="listItem2">
-        <div class="col-6 col-m-12 left">
-          <div class="viewItemImg"></div>
+    <div class="modal">
+      <div class="modal-container">
+        <div class="modal-content">
+          <div class="modal-header">Pledge Details</div>
+          <div class="modal-form">
+            <select name="category" id="category" class="dropdown">
+              <option value="" disabled selected>Select a category</option>
+              <option value="volunteer">Volunteer</option>
+              <option value="donate">Donate</option>
+            </select>
+
+            <select name="type" id="dd_volunteer" class="dropdown">
+              <option value="" disabled selected>Select a task</option>
+              <option rel="volunteer" value="Teach Art">Teach art</option>
+              <option rel="volunteer" value="Assist Kids">Assist Kids</option>
+              <option rel="volunteer" value="Distribute Food">Distribute Food</option>
+            </select>
+
+            <select name="type" id="dd_volunteer_amt" class="dropdown">
+              <option value="" disabled selected>Select a time</option>
+              <option rel="volunteer" value="9:00 - 10:00 AM">9:00 - 10:00 AM</option>
+              <option rel="volunteer" value="10:00 - 11:00 AM">10:00 - 11:00 AM</option>
+              <option rel="volunteer" value="11:00 - 12:00 AM<">11:00 - 12:00 AM</option>
+            </select>
+
+            <select name="type2" id="dd_donate" class="dropdown">
+              <option value="" disabled selected>Select an item</option>
+              <option rel="donate" value="Crayons / Coloring Materials">Crayons / Coloring Materials</option>
+              <option rel="donate" value="Paper">Paper</option>
+              <option rel="donate" value="Snacks">Snacks</option>
+            </select>
+
+            <input type="number" id="dd_donate_amt" class="dropdown">
+
+
+          </div>
+          <div class="btn-container">
+            <div class="button modal-ok">OK</div>
+            <div class="button modal-cancel">CANCEL</div>
+          </div>
         </div>
-        <div class="col-6 col-m-12 left">
-          <div class="listItemDetails">
-            <div class="listItemName">Townsville Blood Drive</div>
-            <div class="listItemCreator">by CBA Innovation Lab</div>
-            <div class="listItemDescription">Annual blood donation drive for the residents of Townsville, Queensland</div>
-            <div class="listItemStatusContainer">
-              <div class="listItemStatus"></div>
-            </div>
-            <div class="listItemProgressDetails">
-              <div class="listItemPercentComplete">
-                <span class="listItemNumber">50%</span><br>
-                complete
+      </div>
+    </div>
+    <div class="viewDrive">
+      <div class="viewBanner">
+        <div class="viewDetails">
+          <div class="viewTitle">Kids' Art Day</div>
+          <div class="viewDescription">Time for the kids to unleash their creativity in this fun-filled event.</div>
+        </div>
+      </div>
+      <div class="viewTiles">
+        <div class="viewTileContact" style="border-right: 1px solid gray;">Contact</div>
+        <div class="viewTileLink">Event Page</div>
+      </div>
+      <div class="viewBody">
+        <div class="myContributions">
+          You have no commitments yet.
+        </div>
+
+        <div class="addContribution">
+          <!-- <div class="callToAction"></div> -->
+          <div class="button btnContribute">Add Contribution</div>
+        </div>
+      </div>
+
+      <!-- <div class="listItem2"> -->
+        <!-- <div class="col-m-12">
+          <div class="pledgeDetailsContainer">
+            <div class="listItemDetails">
+              <div class="listItemName">Townsville Blood Drive</div>
+              <div class="listItemCreator">by CBA Innovation Lab</div>
+              <div class="listItemDescription">Annual blood donation drive for the residents of Townsville, Queensland</div>
+              <div class="listItemStatusContainer">
+                <div class="listItemStatus"></div>
               </div>
-              <div class="listItemBackersCount">
-                <span class="listItemNumber">34</span><br>
-                volunteers
-              </div>
-              <div class="listItemRemainingDays">
-                <span class="listItemNumber">12</span><br>
-                days to go
+              <div class="listItemProgressDetails">
+                <div class="listItemPercentComplete">
+                  <span class="listItemNumber">50%</span><br>
+                  complete
+                </div>
+                <div class="listItemBackersCount">
+                  <span class="listItemNumber">34</span><br>
+                  volunteers
+                </div>
+                <div class="listItemRemainingDays">
+                  <span class="listItemNumber">12</span><br>
+                  days to go
+                </div>
               </div>
             </div>
           </div>
           <div class="btn btnPledge">Pledge</div>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
     </div>
     <div class="pledgeSuccess">
       <h2>Thank You!</h2>

@@ -2,6 +2,8 @@ $('.beInvolved').on('click', function() {
   $('.landingPage').fadeOut();
   // $('.appBar').show();
   $('.appBody').show();
+  $('.explore').show();
+  $('.appTitle').text('Vision Rescue Projects');
   // $('.bottomTabs').show();
 });
 
@@ -136,3 +138,40 @@ $('.addRequirement').on('click', function() {
       +"</div>"
     );
 })
+
+$('.btnContribute').on('click', function (){
+  $('.modal').show();
+});
+
+
+$("#category").on("change",function(){
+  var val = $(this).val();
+
+  //clear all;
+
+  if (val === "donate") {
+    $('#dd_donate').show();
+  } else if (val === "volunteer") {
+    $('#dd_volunteer').show();
+  }
+});
+
+$("#dd_volunteer").on("change",function(){
+  var val = $(this).val();
+
+  if (val != "") {
+    $('#dd_volunteer_amt').show();
+  }
+});
+
+$("#dd_donate").on("change",function(){
+  var val = $(this).val();
+
+  if (val != "") {
+    $('#dd_donate_amt').show();
+  }
+});
+
+$(".modal-cancel").on("click", function() {
+  $('modal').hide();
+});

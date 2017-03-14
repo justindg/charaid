@@ -94,6 +94,7 @@ body {
 .visionRescueLink {
   text-align: center;
   color: white;
+  margin-bottom: 15px;
 }
 
 .video {
@@ -108,8 +109,9 @@ body {
   font-weight: 700;
   font-size: 0.8em;
   color: white;
-  margin: 15px 0;
+  margin-bottom: 15px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .getInvolved {
@@ -123,6 +125,7 @@ body {
   left: 0;
   background-image: url('../img/home2.png');
   background-size: 30px 30px;
+  background-color: black;
   background-position: center;
   background-repeat: no-repeat;
   float: left;
@@ -134,8 +137,10 @@ body {
   top: 0;
   overflow: auto;
   width: 100%;
-  border-bottom: 1px solid lightgrey;
+  /*border-bottom: 1px solid lightgrey;*/
   z-index: 2;
+  background-color: black;
+  color: white;
 }
 
 .appTitle {
@@ -213,9 +218,16 @@ body {
   background-size: 30px 30px;
 }
 
+.explore {
+  overflow: auto;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}
+
 .listItemDetails {
-  /*padding-left: 10px;
-  padding-right: 10px;*/
   background: white;
 }
 
@@ -243,8 +255,6 @@ body {
 
 .listItemDetails {
   padding: 15px 15px 15px 15px;
-  /*box-sizing: border-box;
-  border-radius: 0 0 20px 20px;*/
   border: 1px solid lightgrey;
   border-top: 0;
   color: #434344;
@@ -262,7 +272,8 @@ body {
 }
 
 .listItemDescription {
-  font-size: 0.8em;
+  font-family: "Georgia", serif;
+  font-size: 0.9em;
   /*color: black;*/
   margin: 10px 0;
   min-height: 54px;
@@ -311,15 +322,161 @@ body {
 }
 
 /*VIEW ITEM*/
+.viewBanner {
+  background-image: url('../img/art_day.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+}
+
+.viewDetails {
+  position: relative;
+  height: 100%;
+  border: 0;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.70);
+  overflow: hidden;
+  z-index: 2;
+  color: white;
+  padding: 15px;
+}
+
+.viewTitle {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.viewDescription {
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.viewTiles {
+  overflow: auto;
+}
+
+.viewTiles > div {
+  font-weight: 700;
+  font-size: 0.8em;
+  width: 50%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+  /*height: 80px;*/
+  background-color: lightgray;
+  text-transform: uppercase;
+  text-align: center;
+  /*border-top: 1px solid gray;
+  border-bottom: 1px solid gray;*/
+}
+
+.viewBody {
+  padding: 15px;
+}
+
+.myContributions {
+  margin-bottom: 15px;
+}
+
+.addContribution {
+  padding-top: 15px;
+  border-top: 1px solid gray;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Could be more or less, depending on screen size */
+  height: 100%;
+}
+
+.modal-header {
+  background-color: gray;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 5px 5px 0 0;
+}
+
+.modal-form {
+  padding: 15px;
+}
+
+.dropdown {
+  font-size: 1em;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  align-self: center;
+  background-color: #fefefe;
+  /*border: 1px solid #888;*/
+  border-radius: 5px;
+  width: 80%;
+  height: 50%;
+  position: relative;
+}
+
+.btn-container {
+  position: absolute;
+  bottom: 0;
+  padding: 0 15px 5px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-container > div {
+  /*width: 50%;*/
+  /*float: left;*/
+  /*box-sizing: border-box;*/
+  margin-bottom: 10px;
+}
+
+#dd_volunteer,
+#dd_volunteer_amt,
+#dd_donate,
+#dd_donate_amt {
+  display: none;
+}
+
+/* */
 .viewDrive {
   display: none;
   z-index: 3;
+  padding: 0 0 60px 0;
+  background-color: white;
+  height: 100vh;
 }
 
 .viewItemImg {
   width: 100%;
   height: 250px;
-  background-image: url('../img/poster.jpg');
+  background-image: url('../img/art_day.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -327,12 +484,30 @@ body {
   border-radius: 5px;
 }
 
+.pledgeDetailsContainer {
+  background-image: url('../img/art_day.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0;
+}
+
+.pledgeDetailsContainer > .listItemDetails {
+  position: relative;
+  height: 100%;
+  border: 0;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.70);
+  overflow: hidden;
+  z-index: 2;
+
+  color: white;
+}
+
 .btn {
   margin: 10px 0;
   border-radius: 10px;
   font-family: "Sansita", sans-serif;
   text-align: center;
-  /*height: 40px;*/
   background-color: #0096D6;
   padding: 10px 0 12px 0;
   color: white;
@@ -614,12 +789,12 @@ h2 {
 }
 
 .addRequirement {
-  background-color: darkred;
+  background-color: #d61830;
   margin-bottom: 0;
 }
 
 .btnUploadFromGallery {
-  background-color: darkred;
+  background-color: #d61830;
   margin-bottom: 0;
 }
 
