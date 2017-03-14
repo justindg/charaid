@@ -175,7 +175,7 @@ body {
 
 .tab {
   float: left;
-  width: 25%;
+  width: 33.333%;
   height: 50px;
   box-sizing: border-box;
   text-align: center;
@@ -315,6 +315,7 @@ body {
   border-radius: 0 0 5px 5px;
   font-weight: 700;
   font-size: 0.8em;
+  text-transform: uppercase;
 }
 
 /*VIEW ITEM*/
@@ -373,17 +374,60 @@ body {
   padding: 15px;
 }
 
+.viewLogs {
+  display: none;
+  padding: 5px 10px;
+  border: 1px solid blue;
+  background-color: lightblue;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}
+
 .myContributions {
   margin-bottom: 15px;
   overflow: auto;
 }
 
-.myContributions > div {
+/*.myContributions > div {
   float: left;
   width: 50%;
+  box-sizing: border-box;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #888;
+}*/
+
+.pledgeDetails {
+  width: 100%;
+}
+
+.myPledgesItem {
+  overflow: auto;
+  width: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.col-cat {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #888;
 }
 
 .col-amt {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #888;
   text-align: right;
 }
 
@@ -669,6 +713,7 @@ body {
 
 .myPledges {
   display: none;
+  padding: 10px;
 }
 
 .drives {
@@ -747,13 +792,19 @@ body {
   font-size: 0.8em;
 }
 
-.pledges {
+.pledge {
   overflow: auto;
   margin-bottom: 10px;
   padding: 10px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0;
+  border-left: 5px solid #d61830;
   color: #434344;
+  box-sizing: border-box;
+}
+
+.pledgeKAD {
+  display: none;
 }
 
 .pledges > div {
@@ -765,11 +816,10 @@ body {
   height: 70px;*/
   width: 30%;
   height: 80px;
-  background-image: url('../img/poster.jpg');
+  background-image: url('../img/art_day.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 5px;
   border-radius: 5px;
 }
 
@@ -954,9 +1004,9 @@ h2 {
   /*margin: 5px 0px;*/
 }
 /* For mobile phones: */
-[class*="col-"] {
+/*[class*="col-"] {
     width: 100%;
-}
+}*/
 @media only screen and (min-width: 600px) {
     /* For tablets: */
     .col-m-1 {width: 8.33%;}

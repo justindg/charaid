@@ -63,7 +63,7 @@ $('.tabPledges').on('click', function() {
   $(this).parent().find('div').removeClass('tabActive');
   $(this).addClass('tabActive');
   $('.myPledges').slideDown();
-  $('.appTitle').text('My Pledges');
+  $('.appTitle').text('My Commitments');
 });
 
 $('.btnToRequirements').on('click', function() {
@@ -179,7 +179,7 @@ $(".modal-cancel").on("click", function() {
 var data = {
   category: "",
   type: "",
-  amount: ""
+  amount: 0
 };
 
 var resetModal = function() {
@@ -187,7 +187,7 @@ var resetModal = function() {
   $('.skill > div').removeClass('selected');
   $('.time > div').removeClass('selected');
   $('.type > div').removeClass('selected');
-  $('.amount > .val').val(0);
+  $('.amount > .val').val("");
   $('.amount').hide();
   $('.time').hide();
   $('.volunteer_container').hide();
@@ -272,13 +272,39 @@ $('.modal-ok').on('click', function () {
 
 
   //TODO: add to my commitments tab
+  $('.myPledgesItem').append(
+    row
+  );
+  $('.pledgeEmpty').hide();
+  $('.pledgeKAD').show();
+  $('.appTitle').text('Vision Rescue Projects');
 
   data = {
     category: "",
     type: "",
-    amount: ""
+    amount: 0
   };
 
   resetModal();
   $('.modal').hide();
+
+  $(".viewLogs").slideDown().delay(1000).slideUp();
+});
+
+$('.pledgeKAD').on('click', function() {
+  $('.myPledges').hide();
+  $('.viewDrive').fadeIn(100);
+
+  $('.tabPledges').removeClass('tabActive');
+  $('.tabExplore').addClass('tabActive');
+  $('.appTitle').text('Vision Rescue Projects');
+});
+
+$('.pledgeEmpty').on('click', function() {
+  $('.myPledges').hide();
+  $('.explore').fadeIn(100);
+
+  $('.tabPledges').removeClass('tabActive');
+  $('.tabExplore').addClass('tabActive');
+  $('.appTitle').text('Vision Rescue Projects');
 });
