@@ -1,0 +1,643 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background: white;
+  height: 100%;
+}
+
+.landingPage {
+  background-image: url('../img/landing_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.row {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 50px 30px;
+  background: rgba(0,0,0,0.70);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.row2 {
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 70px;
+  padding-top: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: rgba(0,0,0,0.80);
+  overflow: auto;
+  z-index: 2;
+}
+
+.logo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2em;
+  line-height: 1em;
+  color: white;
+}
+
+.visionRescueLink {
+  text-align: center;
+  color: white;
+}
+
+.video {
+  margin: 20px 0;
+}
+
+.button {
+  background-color: #d61830;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.8em;
+  color: white;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+
+.appHome {
+  height: 50px;
+  width: 50px;
+  position:absolute;
+  left: 0;
+  background-image: url('../img/home2.png');
+  background-size: 30px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.appBar {
+  display: none;
+  background: white;
+  position: fixed;
+  top: 0;
+  overflow: auto;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+}
+
+.appTitle {
+  font-size: 1.3em;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.appBody {
+  display: none;
+  /*padding-bottom: 50px;
+  padding-top: 60px;
+  padding-left: 10px;
+  padding-right: 10px;*/
+  overflow: auto;
+
+  background-color: rgba(0,0,0,0.70);
+  background-image: url('../img/landing_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.bottomTabs {
+  display: none;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  height: 50px;
+  border-top: 1px solid lightgray;
+  box-sizing: border-box;
+}
+
+.tab {
+  float: left;
+  width: 25%;
+  height: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: white;
+}
+
+.tabActive {
+  background-color: lightgray;
+}
+
+.tabExplore {
+  background-image: url('../img/explore2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
+}
+
+.tabDrives {
+  background-image: url('../img/drives2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
+}
+
+.tabPledges {
+  background-image: url('../img/pledges2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
+}
+
+.tabCreate {
+  background-image: url('../img/create2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
+}
+
+.listItemDetails {
+  /*padding-left: 10px;
+  padding-right: 10px;*/
+  background: white;
+}
+
+.listItem {
+  box-sizing: border-box;
+  /*background-color: white;*/
+  overflow: auto;
+  /*margin-bottom: 10px;*/
+  padding: 10px;
+}
+
+.listItemImgContainer {
+  /*padding: 10px 10px 0 10px;*/
+}
+
+.listItemImg {
+  width: 100%;
+  height: 150px;
+  background-image: url('../img/art_day.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.listItemDetails {
+  padding: 15px 15px 15px 15px;
+  /*box-sizing: border-box;
+  border-radius: 0 0 20px 20px;*/
+  border: 1px solid lightgrey;
+  border-top: 0;
+  color: #434344;
+  background-color: white;
+}
+
+.listItemName {
+  font-weight: 700;
+}
+
+.listItemCreator {
+  display: none;
+  font-size: 0.8em;
+  color: gray;
+}
+
+.listItemDescription {
+  font-size: 0.8em;
+  /*color: black;*/
+  margin: 10px 0;
+  min-height: 54px;
+}
+
+.listItemStatusContainer {
+  border-radius: 30px;
+  background-color: lightgray;
+  height: 12px;
+  margin: 5px 0;
+}
+
+.listItemStatus {
+  width: 50%;
+  height: 12px;
+  background-color: green;
+  border-radius: 30px;
+  margin: 5px 0;
+}
+
+.listItemProgressDetails {
+  overflow: auto;
+}
+
+.listItemProgressDetails > div {
+  width: 33.33%;
+  font-size: 0.7em;
+  color: #434344;
+  text-align: center;
+  float: left;
+}
+
+.listItemNumber {
+  font-size: 1.4em;
+}
+
+.listBtnPledge {
+  text-align: center;
+  background-color: #d61830;
+  color: white;
+  padding: 10px 0;
+  box-sizing: border-box;
+  border-radius: 0 0 5px 5px;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+/*VIEW ITEM*/
+.viewDrive {
+  display: none;
+  z-index: 3;
+}
+
+.viewItemImg {
+  width: 100%;
+  height: 250px;
+  background-image: url('../img/poster.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.btn {
+  margin: 10px 0;
+  border-radius: 10px;
+  font-family: "Sansita", sans-serif;
+  text-align: center;
+  /*height: 40px;*/
+  background-color: #0096D6;
+  padding: 10px 0 12px 0;
+  color: white;
+}
+
+.btnPledge {
+  width: 100%;
+}
+
+.left {
+  float: left;
+}
+
+.createDrive {
+  display: none;
+  background-color: white;
+  padding: 20px 20px 20px 20px;
+  border-radius: 5px;
+}
+
+.pledgeSuccess {
+  display: none;
+  padding: 0 30px;
+}
+
+.myDrives {
+  display: none;
+}
+
+.myPledges {
+  display: none;
+}
+
+.drives {
+  overflow: auto;
+  /*padding-bottom: 10px;*/
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.drives > div {
+  float: left;
+}
+
+.drivesPic {
+  /*width: 70px;
+  height: 70px;*/
+  width: 30%;
+  height: 80px;
+  background-image: url('../img/poster.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*margin-bottom: 5px;*/
+  border-radius: 5px;
+}
+
+.drivesDescription {
+  width: 70%;
+}
+
+.drivesTitle {
+  /*width: 100%;*/
+  padding-left: 10px;
+  /*color: white;*/
+  font-weight: 700;
+  color: #434344;
+}
+
+.pledgesTitle {
+  /*color: white;*/
+}
+
+.drivesStatusContainer {
+  border-radius: 30px;
+  background-color: lightgray;
+  height: 12px;
+  margin: 5px 10px;
+}
+
+.drivesStatus {
+  width: 50%;
+  height: 12px;
+  background-color: green;
+  border-radius: 30px;
+  margin: 5px 0;
+}
+
+.drivesNumbers {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: gray;
+}
+
+.drivesNumbers > div {
+  float: left;
+  width: 50%;
+}
+
+.drivesPercentComplete {
+  font-size: 0.8em;
+}
+
+.drivesDaysToGo {
+  font-size: 0.8em;
+}
+
+.pledges {
+  overflow: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  color: #434344;
+}
+
+.pledges > div {
+  float: left;
+}
+
+.pledgesPic {
+  /*width: 70px;
+  height: 70px;*/
+  width: 30%;
+  height: 80px;
+  background-image: url('../img/poster.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.pledgesTitle {
+  font-weight: 700;
+}
+
+.pledgesDescription {
+  width: 70%;
+}
+
+.pledgesDescription > div {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.pledgesStatusContainer {
+  border-radius: 30px;
+  background-color: lightgray;
+  height: 12px;
+  margin: 5px 10px;
+}
+
+.pledgesStatus {
+  width: 50%;
+  height: 12px;
+  background-color: green;
+  border-radius: 30px;
+  margin: 5px 0;
+}
+
+.pledgeRole {
+  font-size: 0.8em;
+}
+
+.pledgeDaysToGo {
+  font-size: 0.8em;
+}
+
+/*CREATE DRIVE*/
+.createDriveHeaderSubtext {
+  text-align: center;
+}
+
+.createDriveHeader {
+  text-align: center;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.createDetails {
+  overflow: auto;
+}
+
+.createDetails > div {
+  margin-bottom: 10px;
+}
+
+.createNavigation {
+  overflow: auto;
+}
+
+.createRequirements {
+  display: none;
+}
+
+.uploadPicture {
+  display: none;
+}
+
+.btnPrev {
+  float: left;
+  padding: 10px 40px 12px 40px;
+}
+
+.btnNext {
+  float: right;
+  padding: 10px 40px 12px 40px;
+}
+
+.btnDone {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.submitSuccess {
+  display: none;
+  padding: 0px 30px;
+}
+
+/*Utilities*/
+h2 {
+  text-align: center;
+}
+
+.textBox {
+  border: 1px solid gray;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 8px;
+  width: 100%;
+  font-size: 1em;
+  font-style: "Raleway", sans-serif;
+}
+
+.createDetailsDate {
+  overflow: auto;
+}
+
+.createDetailsDate > div {
+  float: left;
+}
+
+.requirement {
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.requirement > .label {
+  background-color: darkgray;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  font-family: "Sansita", sans-serif;
+  width: 11%;
+  float: left;
+  line-height: 36px;
+  border-radius: 100px;
+}
+
+.requirement > .name {
+  width: 65%;
+  float: left;
+}
+
+.requirement > .pad {
+  width: 2%;
+  height: 1px;
+  float: left;
+  overflow: auto;
+  color: white;
+}
+
+.requirement > .amount {
+  width: 20%;
+  float: left;
+}
+
+.addRequirement {
+  background-color: darkred;
+  margin-bottom: 0;
+}
+
+.btnUploadFromGallery {
+  background-color: darkred;
+  margin-bottom: 0;
+}
+
+.textBoxDate {
+  border: 1px solid gray;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 1em;
+  height: 36px;
+  width: 90%;
+  font-style: "Raleway", sans-serif;
+}
+
+.calendarIcon {
+  height: 36px;
+  width: 10%;
+  background-image: url('../img/calendar.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.col {
+  height: auto;
+  float: left;
+  /*margin: 5px 0px;*/
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
