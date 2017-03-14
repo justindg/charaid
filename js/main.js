@@ -6,11 +6,12 @@ $('.beInvolved').on('click', function() {
 });
 
 var hideAll = function() {
-  $('.explore').slideUp();
-  $('.viewDrive').slideUp();
-  $('.createDrive').slideUp();
-  $('.myDrives').slideUp();
-  $('.myPledges').slideUp();
+  // $('.appBody').hide();
+  $('.explore').hide();
+  $('.viewDrive').hide();
+  $('.createDrive').hide();
+  $('.myDrives').hide();
+  $('.myPledges').hide();
 }
 
 $('.appHome').on('click', function() {
@@ -21,7 +22,7 @@ $('.appHome').on('click', function() {
   // if ($('.bottomTabs').is(':hidden')) {
     // $('.bottomTabs').show();
   // }
-  $('.landingPage').show();
+  $('.landingPage').fadeIn();
 });
 
 $('.listItem').on('click', function() {
