@@ -41,7 +41,7 @@
     <!-- <div class="row2"> -->
     <!--Explore start -->
     <div class="explore">
-      <div class="col-4 col-m-6 col">
+      <div class="col">
         <div class="listItem">
           <div class="listItemImgContainer">
             <div class="listItemImg"></div>
@@ -228,38 +228,33 @@
     <!--View item end-->
     <!--Create drive -->
     <div class="createDrive">
-      <div class="createDriveHeaderSubtext">
-        Step 1 of 3
-      </div>
-      <div class="createDriveHeader">
+      <div class="createHeader">
         Drive Details
       </div>
       <div class="createDetails">
         <div class="createDetailsName">
-          Drive Name<br>
+          <div class="label">Drive Name</div>
           <input class="textBox" type="text">
         </div>
         <div class="createDetailsDescription">
-          Description<br>
-          <input class="textBox" type="text">
+          <div class="label">Description</div>
+          <textarea class="textBox" type="text"></textarea>
         </div>
         <div class="createDetailsDate">
-          Target Date<br>
-          <div class="textBoxDate"></div>
-          <div class="calendarIcon"></div>
+          <div class="label">Target Date</div>
+          <input class="textBox" type="date">
         </div>
         <div class="createDetailsLocation">
-          Location<br>
+          <div class="label">Location</div>
           <input class="textBox" type="text">
         </div>
-
-        <div class="createNavigation">
-          <!-- <div class="btn btnPrev">< Prev</div> -->
-          <div class="btn btnNext btnToRequirements">Next ></div>
-        </div>
+        <!-- <div class="button btnToRequirements">Next ></div> -->
       </div>
 
       <div class="createRequirements">
+        <div class="createHeader">
+          Drive Requirements
+        </div>
         <div class="requirementList">
           <div class="requirement">
             <div class="label">1</div>
@@ -273,13 +268,11 @@
             </div>
           </div>
         </div>
-        <div class="btn addRequirement">
-          Add more...
-        </div>
-        <div class="createNavigation">
+        <div class="button addRequirement">+ ADD REQUIREMENT</div>
+        <!-- <div class="createNavigation">
           <div class="btn btnPrev btnToDetails">< Prev</div>
           <div class="btn btnNext btnToUpload">Next ></div>
-        </div>
+        </div> -->
       </div>
 
       <div class="uploadPicture">

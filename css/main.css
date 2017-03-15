@@ -217,9 +217,9 @@ body {
 .explore {
   overflow: auto;
   padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  /*padding-left: 10px;*/
+  /*padding-right: 10px;*/
+  /*padding-bottom: 10px;*/
   margin-bottom: 50px;
 }
 
@@ -232,7 +232,7 @@ body {
   /*background-color: white;*/
   overflow: auto;
   /*margin-bottom: 10px;*/
-  padding: 10px;
+  padding: 0 10px 10px 10px;
 }
 
 .listItemImgContainer {
@@ -272,7 +272,7 @@ body {
   font-size: 0.9em;
   /*color: black;*/
   margin: 10px 0;
-  min-height: 54px;
+  /*min-height: 54px;*/
 }
 
 .listItemStatusContainer {
@@ -368,6 +368,11 @@ body {
   text-align: center;
   /*border-top: 1px solid gray;
   border-bottom: 1px solid gray;*/
+}
+
+.viewTiles > div:active {
+  background-color: #0096D6;
+  color: white;
 }
 
 .viewBody {
@@ -698,8 +703,11 @@ body {
 .createDrive {
   display: none;
   background-color: white;
-  padding: 20px 20px 20px 20px;
-  border-radius: 5px;
+  padding: 10px 10px 60px 10px;
+  overflow: auto;
+  /*border-radius: 5px;*/
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .pledgeSuccess {
@@ -864,18 +872,26 @@ body {
   text-align: center;
 }
 
-.createDriveHeader {
-  text-align: center;
-  font-size: 1.3em;
-  margin-bottom: 20px;
+.createHeader {
+  background-color: gray;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid gray;
 }
 
 .createDetails {
   overflow: auto;
+  /*margin-bottom: 10px;*/
 }
 
 .createDetails > div {
   margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
 }
 
 .createNavigation {
@@ -883,11 +899,11 @@ body {
 }
 
 .createRequirements {
-  display: none;
+  /*display: none;*/
 }
 
 .uploadPicture {
-  display: none;
+  /*display: none;*/
 }
 
 .btnPrev {
@@ -917,12 +933,13 @@ h2 {
 
 .textBox {
   border: 1px solid gray;
-  border-radius: 10px;
+  border-radius: 5px;
   box-sizing: border-box;
   padding: 8px;
   width: 100%;
   font-size: 1em;
   font-style: "Raleway", sans-serif;
+  outline: 0;
 }
 
 .createDetailsDate {

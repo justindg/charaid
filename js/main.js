@@ -20,6 +20,7 @@ $('.appHome').on('click', function() {
   hideAll();
   $('.appBody').hide();
   $('.landingPage').fadeIn();
+  $('.bottomTabs > div').removeClass('tabActive');
 });
 
 $('.listItem').on('click', function() {
@@ -192,6 +193,7 @@ var resetModal = function() {
   $('.time').hide();
   $('.volunteer_container').hide();
   $('.donate_container').hide();
+  $('.modal-ok').hide();
 
   data = {
     category: "",
