@@ -938,8 +938,19 @@ h2 {
   padding: 8px;
   width: 100%;
   font-size: 1em;
-  font-style: "Raleway", sans-serif;
+  font-style: "Open Sans", sans-serif;
   outline: 0;
+}
+
+.datePicker {
+  outline: 0;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-style: "Open Sans", sans-serif;
 }
 
 .createDetailsDate {
