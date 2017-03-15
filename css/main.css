@@ -10,6 +10,37 @@ body {
   height: 100%;
 }
 
+.pass {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 999;
+  background-color: white;
+}
+
+.pass-content {
+  align-self: center;
+  box-sizing: border-box;
+}
+
+.pw {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 8px;
+}
+
+.wrapper {
+  display: none;
+}
+
 .landingPage {
   width: 100%;
   background-image: url('../img/landing_bg.jpg');
@@ -604,6 +635,20 @@ body {
   font-weight: 700;
   color: white;
   margin-bottom: 5px;
+  outline: 0;
+}
+
+.itemInput {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
 }
 
 .selected {
@@ -704,6 +749,7 @@ body {
   display: none;
   background-color: white;
   padding: 10px 10px 60px 10px;
+  padding: 0 0 60px 0;
   overflow: auto;
   /*border-radius: 5px;*/
   height: 100%;
@@ -876,7 +922,6 @@ body {
   background-color: gray;
   color: white;
   font-weight: 700;
-  margin-bottom: 10px;
   padding: 10px;
   border-bottom: 1px solid gray;
 }
@@ -884,6 +929,7 @@ body {
 .createDetails {
   overflow: auto;
   /*margin-bottom: 10px;*/
+  padding: 10px 10px 0 10px;
 }
 
 .createDetails > div {
@@ -900,10 +946,14 @@ textarea {
 
 .createRequirements {
   /*display: none;*/
+  overflow: auto;
+  padding: 10px;
 }
 
 .uploadPicture {
   /*display: none;*/
+  overflow: auto;
+  padding: 10px 10px 0 10px;
 }
 
 .btnPrev {
@@ -919,11 +969,15 @@ textarea {
 .btnDone {
   width: 100%;
   margin-top: 20px;
+  box-sizing: border-box;
 }
 
 .submitSuccess {
   display: none;
   padding: 0px 30px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: white;
 }
 
 /*Utilities*/
@@ -961,9 +1015,35 @@ h2 {
   float: left;
 }
 
+.requirementList {
+  overflow: auto;
+  /*margin-bottom: 10px;*/
+}
+
 .requirement {
   overflow: auto;
   margin-bottom: 10px;
+}
+
+.requirement > div {
+  float: left;
+  width: 33.333%;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding: 5px 0;
+}
+
+.req-category {
+  font-weight: 700;
+  color: #d61830;
+}
+
+.req-skill {
+  text-align: center;
+}
+
+.req-time {
+  text-align: right;
 }
 
 .requirement > .label {
@@ -997,12 +1077,15 @@ h2 {
 }
 
 .addRequirement {
-  background-color: #d61830;
   margin-bottom: 0;
 }
 
 .btnUploadFromGallery {
-  background-color: #d61830;
+  margin-bottom: 10px;
+}
+
+.btnFinish {
+  background-color: #0096D6;
   margin-bottom: 0;
 }
 

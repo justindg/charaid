@@ -1,3 +1,12 @@
+$('.pw').on('keyup', function() {
+  var val = $('.pw').val();
+  if (val=="4567") {
+    $('.pass').fadeOut(100);
+  } else {
+
+  }
+});
+
 $('.beInvolved').on('click', function() {
   $('.landingPage').fadeOut();
   // $('.appBar').show();
@@ -95,13 +104,12 @@ $('.btnToUpload').on('click', function() {
 });
 
 $('.btnFinish').on('click', function() {
-  $('.createRequirements').hide();
-  $('.createDetails').hide();
-  $('.uploadPicture').hide();
-  $('.submitSuccess').show();
+  $('.createDrive').hide();
+  $('.explore').show();
+  $('.bottomTabs > div').removeClass('tabActive');
+  $('.tabExplore').addClass('tabActive');
 
-  $('.createDriveHeaderSubtext').hide();
-  $('.createDriveHeader').hide();
+  //addToExplorePage
 });
 
 $('.btnPledge').on('click', function() {
@@ -124,24 +132,26 @@ $('.btnDone').on('click', function() {
 var reqCt = 1;
 
 $('.addRequirement').on('click', function() {
-  reqCt++;
-  $('.requirementList').append(
-    "<div class='requirement'>"
-      +"<div class='label'>"+reqCt+"</div>"
-      +"<div class='pad'></div>"
-      +"<div class='name'>"
-        +"<input class='textBox' placeholder='Name'>"
-      +"</div>"
-      +"<div class='pad'></div>"
-      +"<div class='amount'>"
-        +"<input class='textBox' placeholder='Amt'>"
-      +"</div>"
-      +"</div>"
-    );
+  // reqCt++;
+  // $('.requirementList').append(
+  //   "<div class='requirement'>"
+  //     +"<div class='label'>"+reqCt+"</div>"
+  //     +"<div class='pad'></div>"
+  //     +"<div class='name'>"
+  //       +"<input class='textBox' placeholder='Name'>"
+  //     +"</div>"
+  //     +"<div class='pad'></div>"
+  //     +"<div class='amount'>"
+  //       +"<input class='textBox' placeholder='Amt'>"
+  //     +"</div>"
+  //     +"</div>"
+  //   );
+
+  $('.createModal').show();
 })
 
 $('.btnContribute').on('click', function (){
-  $('.modal').show();
+  $('.pledgeModal').show();
 });
 
 
@@ -240,27 +250,13 @@ $('.amount > .val').on('keyup', function() {
 });
 
 $('.time > .item').on('click', function() {
-  // if ($(this).hasClass('selected')) {
-  //   $(this).removeClass('selected');
-  //   timeSelected--;
-  // } else {
-  //   $(this).addClass('selected');
-  //   timeSelected++;
-  // }
-  //
-  // if (timeSelected > 0) {
-  //   $('.modal-ok').fadeIn(100);
-  // } else {
-  //   $('.modal-ok').hide();
-  // }
-
   $('.time > .item').removeClass('selected');
   $(this).addClass('selected');
   data.amount = $('.time').find('.selected').text();
   $('.modal-ok').fadeIn(100);
 });
 
-$('.modal-ok').on('click', function () {
+$('.modal-ok-pledge').on('click', function () {
   //add to event page
   if($('.myContributions').text() === "-") {
     $('.myContributions').text("");
@@ -268,28 +264,15 @@ $('.modal-ok').on('click', function () {
   }
 
   var row = "<div class='col-cat'>"+ data.type +"</div>" + "<div class='col-amt'>"+ data.amount +"</div>";
-  $('.myContributions').append(
-    row
-  );
+  $('.myContributions').append(row);
 
-
-  //TODO: add to my commitments tab
-  $('.myPledgesItem').append(
-    row
-  );
+  $('.myPledgesItem').append(row);
   $('.pledgeEmpty').hide();
   $('.pledgeKAD').show();
   $('.appTitle').text('Vision Rescue Projects');
 
-  data = {
-    category: "",
-    type: "",
-    amount: 0
-  };
-
   resetModal();
   $('.modal').hide();
-
   $(".viewLogs").slideDown().delay(1000).slideUp();
 });
 
@@ -309,4 +292,51 @@ $('.pledgeEmpty').on('click', function() {
   $('.tabPledges').removeClass('tabActive');
   $('.tabExplore').addClass('tabActive');
   $('.appTitle').text('Vision Rescue Projects');
+});
+
+$('.skill > .itemInput').on('keyup', function() {
+  data.type = $('.skill').find('.itemInput').val();
+  if (data.type) {
+    $('.time').fadeIn(100);
+  } else {
+    $('.time').hide();
+  }
+});
+
+$('.type > .itemInput').on('keyup', function() {
+  data.type = $('.type').find('.itemInput').val();
+  if (data.type) {
+    $('.amount').fadeIn(100);
+  } else {
+    $('.amount').hide();
+  }
+});
+
+$('.amount > .itemInput').on('keyup', function() {
+  data.amount = $(this).val();
+  if (data.amount > 0) {
+    $('.modal-ok').fadeIn(100);
+  } else {
+    $('.modal-ok').hide();
+  }
+});
+
+$('.time > .itemInput').on('keyup', function() {
+  data.amount = $(this).val();
+  if (data.amount > 0) {
+    $('.modal-ok').fadeIn(100);
+  } else {
+    $('.modal-ok').hide();
+  }
+});
+
+
+
+$('.modal-ok-create').on('click', function() {
+  console.log(data);
+
+  var requirement = "<div class='requirement'><div class='req-category'>"+ data.category +"</div><div class='req-skill'>"+ data.type +"</div><div class='req-time'>"+ data.amount +"</div></div>";
+
+  $('.requirementList').append(requirement);
+  $('.modal').hide();
 });

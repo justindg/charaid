@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <div class="pass">
+    <div class="pass-content">
+      <input type="password" class="pw">
+    </div>
+  </div>
   <!-- Landing Page Start -->
   <div class="landingPage">
     <div class="landingRow1">
@@ -43,34 +48,25 @@
     <div class="explore">
       <div class="col">
         <div class="listItem">
-          <div class="listItemImgContainer">
-            <div class="listItemImg"></div>
-          </div>
+          <div class="listItemImgContainer"><div class="listItemImg"></div></div>
           <div class="listItemDetails">
             <div class="listItemName">Kids' Art Day</div>
             <div class="listItemCreator">by CBA Innovation Lab</div>
             <div class="listItemDescription">Time for the kids to unleash their creativity in this fun-filled event.</div>
-            <div class="listItemStatusContainer">
-              <div class="listItemStatus"></div>
-            </div>
+            <div class="listItemStatusContainer"><div class="listItemStatus"></div></div>
             <div class="listItemProgressDetails">
               <div class="listItemPercentComplete">
-                <span class="listItemNumber">50%</span><br>
-                complete
+                <span class="listItemNumber">50%</span><br>complete
               </div>
               <div class="listItemBackersCount">
-                <span class="listItemNumber">34</span><br>
-                volunteers
+                <span class="listItemNumber">34</span><br>volunteers
               </div>
               <div class="listItemRemainingDays">
-                <span class="listItemNumber">12</span><br>
-                days to go
+                <span class="listItemNumber">12</span><br>days to go
               </div>
             </div>
           </div>
-          <div class="listBtnPledge">
-            Volunteer / Donate
-          </div>
+          <div class="listBtnPledge">Volunteer / Donate</div>
         </div>
       </div>
       <!-- Dummy items -->
@@ -142,12 +138,12 @@
     </div>
     <!--Explore end -->
     <!--View item-->
-    <div class="modal">
+    <div class="modal pledgeModal">
       <div class="modal-container">
         <div class="modal-content">
           <div class="modal-header">
             <div class="modal-cancel">X</div>
-            Pledge Details
+            Commitment Details
           </div>
             <div class="modal-form">
               <div class="category">
@@ -193,7 +189,7 @@
               </div>
               <!-- Donate end -->
             </div>
-          <div class="modal-ok">OK</div>
+          <div class="modal-ok modal-ok-pledge">OK</div>
         </div>
       </div>
     </div>
@@ -227,6 +223,55 @@
     </div>
     <!--View item end-->
     <!--Create drive -->
+    <div class="modal createModal">
+      <div class="modal-container">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-cancel">X</div>
+            Requirement Details
+          </div>
+            <div class="modal-form">
+              <div class="category">
+                <div class="volunteer">
+                  <img src="./img/volunteer_sm.png">
+                  <div class="cat">Volunteer</div>
+                </div>
+                <div class="donate">
+                  <img src="./img/donate_sm.png">
+                  <div class="cat">Donate</div>
+                </div>
+              </div>
+              <!-- Volunteer start -->
+              <div class="volunteer_container">
+                <div class="skill">
+                  <div class="label">Skill or service needed:</div>
+                  <input class="itemInput" type="text">
+                </div>
+
+                <div class="time">
+                  <div class="label">NUMBER OF HOURS:</div>
+                  <input class="itemInput" type="number">
+                </div>
+              </div>
+              <!-- Volunteer end -->
+              <!-- Donate start -->
+              <div class="donate_container">
+                <div class="type">
+                  <div class="label">ITEM NEEDED (unit):</div>
+                  <input class="itemInput" type="text" placeholder="e.g. Rice (kg)">
+                </div>
+
+                <div class="amount">
+                  <div class="label">AMOUNT:</div>
+                  <input class="itemInput" type="number" placeholder="0">
+                </div>
+              </div>
+              <!-- Donate end -->
+            </div>
+          <div class="modal-ok modal-ok-create">OK</div>
+        </div>
+      </div>
+    </div>
     <div class="createDrive">
       <div class="createHeader">
         Drive Details
@@ -242,7 +287,7 @@
         </div>
         <div class="createDetailsDate">
           <div class="label">Target Date</div>
-          <br><input class="datePicker" type="date">
+          <br><input class="datePicker" type="datetime-local">
         </div>
         <div class="createDetailsLocation">
           <div class="label">Location</div>
@@ -251,22 +296,14 @@
         <!-- <div class="button btnToRequirements">Next ></div> -->
       </div>
 
+      <div class="createHeader">Drive Requirements</div>
       <div class="createRequirements">
-        <div class="createHeader">
-          Drive Requirements
-        </div>
         <div class="requirementList">
-          <div class="requirement">
-            <div class="label">1</div>
-            <div class="pad"></div>
-            <div class="name">
-              <input type="text" class="textBox" placeholder="Name">
-            </div>
-            <div class="pad"></div>
-            <div class="amount">
-              <input type="number" class="textBox" placeholder="Amt">
-            </div>
-          </div>
+          <!-- <div class="requirement">
+            <div class="req-category">TASK</div>
+            <div class="req-skill">COOK FOOD</div>
+            <div class="req-time">5 HOURS</div>
+          </div> -->
         </div>
         <div class="button addRequirement">+ ADD REQUIREMENT</div>
         <!-- <div class="createNavigation">
@@ -275,21 +312,15 @@
         </div> -->
       </div>
 
+      <div class="createHeader">Upload Photo</div>
       <div class="uploadPicture">
-        <div class="btn btnUploadFromGallery">
+        <div class="button btnUploadFromGallery">
           Select from Gallery
         </div>
-        <div class="createNavigation">
-          <div class="btn btnPrev btnToRequirements">< Prev</div>
-          <div class="btn btnNext btnFinish">Finish</div>
-        </div>
-      </div>
-
-      <div class="submitSuccess">
-        <h2>Thank You!</h2>
-        Your submission is now submitted for approval.
-        You will be notified via email for any updates.
-        <div class="btn btnDone">Done</div>
+        <!-- <div class="createNavigation">
+          <div class="btn btnPrev btnToRequirements">< Prev</div> -->
+        <div class="button btnFinish">Finish</div>
+        <!-- </div> -->
       </div>
     </div>
     <!--Create drive end-->
